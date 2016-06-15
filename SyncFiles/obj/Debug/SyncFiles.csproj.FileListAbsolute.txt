@@ -1,0 +1,8 @@
+D:\repo\SyncFiles\SyncFiles\bin\Debug\SyncFiles.exe.config
+D:\repo\SyncFiles\SyncFiles\bin\Debug\SyncFiles.exe
+D:\repo\SyncFiles\SyncFiles\bin\Debug\SyncFiles.pdb
+D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.Form1.resources
+D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.Properties.Resources.resources
+D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.csproj.GenerateResource.Cache
+D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.exe
+D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.pdb
