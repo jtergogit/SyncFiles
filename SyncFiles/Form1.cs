@@ -83,6 +83,7 @@ namespace SyncFiles
             sw.Close();
             projectPaths.Text = Directory.GetCurrentDirectory() + "\\WebSites.txt";
             SaveSetting("projectPaths", projectPaths.Text);
+            MessageBox.Show("导出成功！");
         }   
 
         /// <summary>
@@ -158,6 +159,7 @@ namespace SyncFiles
                            }
                        }
                        toolStripStatusLabel1.Text = "同步完成";
+                       MessageBox.Show("同步完成！");
                    }
                    catch(Exception ex)
                    {
@@ -239,9 +241,10 @@ namespace SyncFiles
             {
                 if (IgnoreFiles(filePath))
                 {
+                    string dirName = filePath.Substring(sourceDirectory.Length + 1);
                     //根据每个文件名称生成对应的目标文件名称
-                    string filePathTemp = destDirectory + "\\" +  filePath.Substring(sourceDirectory.Length + 1);;
-
+                    string filePathTemp = destDirectory + "\\" + dirName;
+                    toolStripStatusLabel1.Text = "正在同步：" + dirName;
                     //若不存在，直接复制文件；若存在，覆盖复制
                     if (File.Exists(filePathTemp))
                     {
