@@ -6,3 +6,5 @@ D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.Properties.Resources.resources
 D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.csproj.GenerateResource.Cache
 D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.exe
 D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.pdb
+D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.csprojResolveAssemblyReference.cache
+D:\repo\SyncFiles\SyncFiles\bin\Debug\Setting.config
