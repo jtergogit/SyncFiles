@@ -16,9 +16,9 @@ namespace SyncFiles
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
+            Application.Run(new Form1());
             //Application.Run(new ContrastForm());
-            Application.Run(new UpdateDataBase());
+            //Application.Run(new UpdateDataBase());
         }
     }
 }

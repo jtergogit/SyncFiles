@@ -35,7 +35,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>database_process_128px_535388_easyicon.net.ico</ApplicationIcon>
+    <ApplicationIcon>MetroUI_Live_Sync_128px_1121850_easyicon.net.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

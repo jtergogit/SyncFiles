@@ -14,11 +14,21 @@ namespace SyncFiles
 {
     public partial class ContrastForm : Form
     {
+        private DateTime expire = new DateTime(2016, 12, 1);
         public ContrastForm()
         {
             InitializeComponent();
             textLacaConfig.Text = @"E:\abaizx\fx";
             textWebConfig.Text = @"C:\Users\wjm\Desktop\WebSites.txt";
+
+            if (expire < DateTime.Now)
+            {
+                buttonLacaConfig.Enabled = false;
+                buttonWebConfig.Enabled = false;
+                buttonContras.Enabled = false;
+                MessageBox.Show("废铁一块！");
+                toolStripStatusLabel1.Text = "此软件已报废。";
+            }
         }
 
         private void buttonLacaConfig_Click(object sender, EventArgs e)

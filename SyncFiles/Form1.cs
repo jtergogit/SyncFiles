@@ -15,16 +15,39 @@ namespace SyncFiles
     public partial class Form1 : Form
     {
         protected string settingPath = "Setting.config";
+        private DateTime expire = new DateTime(2016, 12, 1);
         public Form1()
         {
             InitializeComponent();
 
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(settingPath);
-            ProjectPath.Text = xmlDoc.SelectSingleNode("configuration/ProjectPath").InnerText;
-            exportText.Text = xmlDoc.SelectSingleNode("configuration/exportText").InnerText;
-            projectPaths.Text = xmlDoc.SelectSingleNode("configuration/projectPaths").InnerText;
-            ignoreText.Text = xmlDoc.SelectSingleNode("configuration/ignoreText").InnerText;
+            //XmlDocument xmlDoc = new XmlDocument();
+            //xmlDoc.Load(settingPath);
+            //ProjectPath.Text = xmlDoc.SelectSingleNode("configuration/ProjectPath").InnerText;
+            //exportText.Text = xmlDoc.SelectSingleNode("configuration/exportText").InnerText;
+            //projectPaths.Text = xmlDoc.SelectSingleNode("configuration/projectPaths").InnerText;
+            //ignoreText.Text = xmlDoc.SelectSingleNode("configuration/ignoreText").InnerText;
+
+            ProjectPath.Text = @"E:\abaizx\fx";
+            exportText.Text = @"E:\AbaiPro\AbaiWebs\webs";
+            projectPaths.Text = @"C:\Users\wjm\Desktop\WebSites.txt";
+            ignoreText.Text = @"C:\Users\wjm\Desktop\ignore.txt";
+
+            if (expire < DateTime.Now)
+            {
+                ProjectPath.Enabled = false;
+                exportText.Enabled = false;
+                projectPaths.Enabled = false;
+                ignoreText.Enabled = false;
+
+                SelectFolder.Enabled = false;
+                exportSelect.Enabled = false;
+                exportBtn.Enabled = false;
+                ignoreBtn.Enabled = false;
+                button1.Enabled = false;
+                MoveFile.Enabled = false;
+                MessageBox.Show("废铁一块！");
+                toolStripStatusLabel1.Text = "此软件已报废。";
+            }
         }
 
         /// <summary>
@@ -39,7 +62,7 @@ namespace SyncFiles
                 if (!string.IsNullOrWhiteSpace(folderBrowserDialog1.SelectedPath))
                 {
                     ProjectPath.Text = folderBrowserDialog1.SelectedPath;
-                    SaveSetting("ProjectPath", ProjectPath.Text);
+                    //SaveSetting("ProjectPath", ProjectPath.Text);
                 }
             }
         }
@@ -56,7 +79,7 @@ namespace SyncFiles
                 if (!string.IsNullOrWhiteSpace(folderBrowserDialog1.SelectedPath))
                 {
                     exportText.Text = folderBrowserDialog1.SelectedPath;
-                    SaveSetting("exportText", exportText.Text);
+                    //SaveSetting("exportText", exportText.Text);
                 }
             }
         }
@@ -81,8 +104,8 @@ namespace SyncFiles
                 sw.WriteLine(directionPath);
             }
             sw.Close();
-            projectPaths.Text = Directory.GetCurrentDirectory() + "\\WebSites.txt";
-            SaveSetting("projectPaths", projectPaths.Text);
+            //projectPaths.Text = Directory.GetCurrentDirectory() + "\\WebSites.txt";
+            //SaveSetting("projectPaths", projectPaths.Text);
             MessageBox.Show("导出成功！");
         }   
 
@@ -96,7 +119,7 @@ namespace SyncFiles
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 projectPaths.Text = openFileDialog1.FileName;
-                SaveSetting("projectPaths", projectPaths.Text);
+                //SaveSetting("projectPaths", projectPaths.Text);
             }
         }
 
@@ -110,7 +133,7 @@ namespace SyncFiles
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 ignoreText.Text = openFileDialog1.FileName;
-                SaveSetting("ignoreText", ignoreText.Text);
+                //SaveSetting("ignoreText", ignoreText.Text);
             }
         }
 
@@ -119,13 +142,13 @@ namespace SyncFiles
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value"></param>
-        private void SaveSetting(string name, string value)
-        {
-            XmlDocument xmlDoc = new XmlDocument();
-            xmlDoc.Load(settingPath);
-            xmlDoc.SelectSingleNode("configuration/" + name).InnerText = value;
-            xmlDoc.Save(settingPath);
-        }
+        //private void SaveSetting(string name, string value)
+        //{
+        //    XmlDocument xmlDoc = new XmlDocument();
+        //    xmlDoc.Load(settingPath);
+        //    xmlDoc.SelectSingleNode("configuration/" + name).InnerText = value;
+        //    xmlDoc.Save(settingPath);
+        //}
 
         /// <summary>
         /// 开始同步文件
