@@ -10,3 +10,4 @@ D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.csprojResolveAssemblyReference.c
 D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.ContrastForm.resources
 D:\repo\SyncFiles\SyncFiles\bin\Debug\Setting.config
 D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.UpdateDataBase.resources
+D:\repo\SyncFiles\SyncFiles\obj\Debug\SyncFiles.AddMemberColumn.resources

@@ -35,7 +35,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>MetroUI_Live_Sync_128px_1121850_easyicon.net.ico</ApplicationIcon>
+    <ApplicationIcon>Apps_menu_editor_128px_1184649_easyicon.net.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMemberColumn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMemberColumn.Designer.cs">
+      <DependentUpon>AddMemberColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContrastForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     <Compile Include="UpdateDataBase.Designer.cs">
       <DependentUpon>UpdateDataBase.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddMemberColumn.resx">
+      <DependentUpon>AddMemberColumn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ContrastForm.resx">
       <DependentUpon>ContrastForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +115,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Apps_menu_editor_128px_1184649_easyicon.net.ico" />
     <Content Include="compare_128px_1168903_easyicon.net.ico" />
     <Content Include="database_process_128px_535388_easyicon.net.ico" />
     <Content Include="MetroUI_Live_Sync_128px_1121850_easyicon.net.ico" />
